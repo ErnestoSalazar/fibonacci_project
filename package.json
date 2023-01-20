@@ -6,8 +6,9 @@
   "scripts": {
     "install:backend": "cd fibonacci_backend && npm install",
     "install:client": "cd fibonnaci_client && npm install",
-    "install:all": "npm run install:backend && npm run install:client",
-    "start": "cd fibonacci_backend && concurrently \"npm start\""
+    "install:all": "npm install && npm run install:backend && npm run install:client",
+    "build": "cd fibonacci_backend && npm run build",
+    "start:all": "concurrently \"cd fibonacci_backend && npm run start\" \"cd fibonnaci_client && npm run dev\""
   },
   "author": "Ernesto Salazar",
   "license": "ISC",
